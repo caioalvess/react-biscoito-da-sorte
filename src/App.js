@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Biscoito from "./assets/biscoito.png";
+import React, { Component } from "react";
+import Button from "./Button/Button";
+import "./style.css";
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.frases = [
+      "A vida trará coisas boas se tiveres paciência.",
+      "Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.",
+      "Não compense na ira o que lhe falta na razão.",
+      "Defeitos e virtudes são apenas dois lados da mesma moeda.",
+      "A maior de todas as torres começa no solo.",
+      "Não há que ser forte. Há que ser flexível.",
+      "Gente todo dia arruma os cabelos, por que não o coração?",
+      "Há três coisas que jamais voltam; a flecha lançada, a palavra dita e a oportunidade perdida.",
+    ];
+    this.handleFrase = this.handleFrase.bind(this);
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  handleFrase() {
+    let state = this.state;
+    let numeroAleatorio = Math.floor(Math.random() * this.frases.length);
+    state.frase = `" ${this.frases[numeroAleatorio]} "`;
+    this.setState(state);
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <img src={Biscoito} alt="" className="img" />
+        <Button handleClick={this.handleFrase} nome="Abrir Biscoito" />
+        <h3 className="frase">{this.state.frase}</h3>
+      </div>
+    );
+  }
 }
 
 export default App;
