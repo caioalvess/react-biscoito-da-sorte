@@ -1,3 +1,13 @@
+# Biscoito da Sorte
+
+Este é um projeto desenvolvido em React JS que se trata de um biscoito da sorte em que, toda vez que o usuário clica no botão "quebrar biscoito", a aplicação exibe uma frase diferente.
+
+Projeto desenvolvido com o objetivo de aprender e praticar estados no React.
+
+<p align="center">
+  <img src="/src/assets/biscoito-da-sorte.PNG" width="100%">
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
