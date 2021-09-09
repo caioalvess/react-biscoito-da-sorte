@@ -2,6 +2,7 @@ import Biscoito from "./assets/biscoito.png";
 import React, { Component } from "react";
 import Button from "./Button/Button";
 import "./style.css";
+import Footer from "./Footer/Footer";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,9 +30,11 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <h1>Biscoito da Sorte</h1>
         <img src={Biscoito} alt="" className="img" />
         <Button handleClick={this.handleFrase} nome="Abrir Biscoito" />
         <h3 className="frase">{this.state.frase}</h3>
+        <Footer />
       </div>
     );
   }
